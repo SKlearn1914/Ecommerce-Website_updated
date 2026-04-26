@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK-Shop - SK Ultimate Online Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_index.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><a style="text-decoration:none;color:white;" href="index.html"><img src="img/logo.png" width="80"
+                    alt=""></a></h1>
+        <nav>
+            <a href="/product">Products</a>
+            <a href="/cart">Cart</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+
+    <!-- Hero Slider -->
+    <div class="hero-slider">
+        <div class="slide active"
+            style="background-image:url('https://images.unsplash.com/photo-1688561808434-886a6dd97b8c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        </div>
+        <div class="slide"
+            style="background-image:url('https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        </div>
+        <div class="slide"
+            style="background-image:url('https://images.unsplash.com/photo-1674027392887-751d6396b710?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="intro">
+        <h2>Welcome to SK-Shop</h2>
+        <p>SK-Shop is your one-stop online store for electronics, fashion, home essentials, and more. We provide
+            high-quality products at affordable prices with fast delivery and excellent customer service.</p>
+    </div>
+
+    <!-- Featured Products -->
+    <h2 class="section-title">Featured Products</h2>
+    <div class="products" id="productContainer"></div>
+
+    <!-- Vision Section -->
+    <div class="vision">
+        <h2>Our Vision</h2>
+        <p>Our vision is to become the most customer-centric e-commerce platform, delivering the best products and
+            services worldwide while promoting convenience, trust, and sustainability.</p>
+    </div>
+
+    <!-- Reviews Section -->
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="reviews" id="reviewsContainer"></div>
+
+    <!-- FAQ Section -->
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq" id="faqContainer"></div>
+
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+        <h2>Get Updates & Offers</h2>
+        <input type="text" placeholder="Enter your email" id="newsletterEmail">
+        <button onclick="subscribeNewsletter()">Subscribe</button>
+    </div>
+
+    <!-- Contact Popup -->
+    <div id="contactPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3>Contact Us</h3>
+            <input type="text" id="popupName" placeholder="Your Name">
+            <input type="email" id="popupEmail" placeholder="Your Email">
+            <textarea id="popupQuestion" placeholder="Your Question"></textarea>
+            <button onclick="sendPopup()">Send</button>
+            <p style="margin-top:10px;">Or contact via WhatsApp: <a href="https://wa.me/1234567890" target="_blank">Chat
+                    Now</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h4>About Us</h4>
+                <p>We provide best products at affordable prices.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="/">Home</a>
+                <a href="/product">Shop</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="/faq">FAQ</a>
+                <a href="https://www.google.com">Help Center</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 All Rights Reserved | Developed By SK
+        </div>
+    </footer>
+
+    <script src="js/script_index.js"></script>
+
+</body>
+
+</html>

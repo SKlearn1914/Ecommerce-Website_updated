@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SK-Shop Admin Panel</title>
+    <link rel="stylesheet" href="../css/Adminpanel_style.css">
+</head>
+
+<body>
+    <header>
+        <h1><a style="text-decoration:none;color:white;" href="/"><img src="../img/logo.png" width="80"
+                    alt=""></a></h1>
+        <nav>
+            <a href="/product">Products</a>
+            <a href="/cart">Cart</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2>SK-Shop Admin</h2>
+            <button onclick="showTab('dashboard')">Dashboard</button>
+            <button onclick="showTab('products')">Products</button>
+            <button onclick="showTab('users')">Users</button>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main">
+
+            <!-- DASHBOARD -->
+            <div id="dashboard" class="tab active">
+                <h1>Dashboard</h1>
+
+                <div class="cards">
+                    <div class="card">Total Products <span id="totalProducts">0</span></div>
+                    <div class="card">Total Users <span id="totalUsers">0</span></div>
+                    <div class="card">Admins <span id="totalAdmins">0</span></div>
+                </div>
+            </div>
+
+            <!-- PRODUCTS -->
+            <div id="products" class="tab">
+
+                <h1>Product Management</h1>
+
+                <div class="form">
+                    <input type="hidden" id="productId">
+
+                    <input type="text" id="name" placeholder="Product Name">
+                    <input type="text" id="category" placeholder="Category">
+                    <input type="number" id="quantity" placeholder="Quantity">
+                    <input type="number" id="price" placeholder="Price">
+                    <input type="number" id="rating" placeholder="Rating">
+                    <input type="text" id="image" placeholder="Image URL">
+
+                    <button onclick="saveProduct()">Save Product</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Rating</th>
+                            <th>IMG URL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTable"></tbody>
+                </table>
+
+            </div>
+
+            <!-- USERS -->
+            <div id="users" class="tab">
+
+                <h1>User Management</h1>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable"></tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h4>About Us</h4>
+                <p>We provide best products at affordable prices.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="/">Home</a>
+                <a href="/product">Shop</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="/faq">FAQ</a>
+                <a href="https://www.google.com">Help Center</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 All Rights Reserved | Developed By SK
+        </div>
+    </footer>
+    <script src="../js/script_adminpanel.js"></script>
+</body>
+
+</html>

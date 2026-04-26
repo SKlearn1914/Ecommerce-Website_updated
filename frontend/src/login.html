@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SK-Shop</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_login.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="/" style="color:white;text-decoration:none;"><img src="../img/logo.png" width="80"
+                    alt=""></a></h1>
+        <nav>
+            <a href="/product">Products</a>
+            <a href="/cart">Cart</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+
+        <!-- LOGIN -->
+        <div class="auth-box" id="loginBox">
+            <h2>Login</h2>
+
+            <form id="loginForm" onsubmit="loginUser(event)">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+
+                <div class="password-box">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <span onclick="togglePassword('loginPassword',this)">Show</span>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <div class="social">
+                <p>Or login with</p>
+                <button class="google" onclick="googleLogin()">Login with Google</button>
+                <button class="facebook" onclick="facebookLogin()">Login with Facebook</button>
+            </div>
+
+            <div class="toggle-link">
+                Don't have account? <span onclick="toggleAuth()">Sign Up</span>
+            </div>
+        </div>
+
+        <!-- SIGNUP -->
+        <div class="auth-box" id="signupBox" style="display:none;">
+            <h2>Sign Up</h2>
+
+            <form id="signupForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+
+                <div class="password-box">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span onclick="togglePassword('password',this)">Show</span>
+                </div>
+
+                <button type="submit">Create Account</button>
+            </form>
+
+            <div class="toggle-link">
+                Already have account? <span onclick="toggleAuth()">Login</span>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h4>About Us</h4>
+                <p>We provide best products at affordable prices.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="/">Home</a>
+                <a href="/product">Shop</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="/faq">FAQ</a>
+                <a href="https://www.google.com">Help Center</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 All Rights Reserved | Developed By SK
+        </div>
+    </footer>
+
+    <script src="../js/script_login.js"></script>
+
+</body>
+
+</html>
